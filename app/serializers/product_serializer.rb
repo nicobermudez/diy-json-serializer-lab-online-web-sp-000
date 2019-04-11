@@ -8,7 +8,7 @@ class ProductSerializer
     serialized_post += '"id": ' + product.id.to_s + ', '
     serialized_post += '"name": "' + product.name + '", '
     serialized_post += '"inventory": "' + product.inventory + '", '
-    serialized_post += '"description": "' + post.description + '" '
+    serialized_post += '"description": "' + post.description + '", '
 
     # and end with the close brace
     serialized_post += '}'
