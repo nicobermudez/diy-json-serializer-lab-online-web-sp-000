@@ -6,7 +6,7 @@ class ProductSerializer
     serialized_post = '{'
 
     serialized_post += '"id": ' + product.id.to_s + ', '
-    serialized_post += '"name": "' + post.title + '", '
+    serialized_post += '"name": "' + product.name + '", '
     serialized_post += '"description": "' + post.description + '", '
 
     # the author association can also be represented in JSON
