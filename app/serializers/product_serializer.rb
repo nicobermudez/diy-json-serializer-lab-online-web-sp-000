@@ -1,16 +1,14 @@
 class ProductSerializer
 
   def self.serialize(product)
+    serialized_product = '{'
 
-    # start with the open brace to create a valid JSON object
-    serialized_post = '{'
+    serialized_product += '"id": ' + product.id.to_s + ', '
+    serialized_product += '"name": "' + product.name + '", '
+    serialized_product += '"description": "' + product.description + '", '
+    serialized_product += '"inventory": ' + product.inventory.to_s + ', '
+    serialized_product += '"price": "' + product.price.to_s + '"'
 
-    serialized_post += '"id": ' + product.id.to_s + ', '
-    serialized_post += '"name": "' + product.name + '", '
-    serialized_post += '"inventory": "' + product.inventory + '", '
-    serialized_post += '"description": "' + post.description + '", '
-
-    # and end with the close brace
-    serialized_post += '}'
+    serialized_product += '}'
   end
 end
